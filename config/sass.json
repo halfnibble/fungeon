@@ -1,0 +1,17 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft-sass-plugin.schema.json",
+
+    "srcFolder": "src/",
+
+    "generatedTsFolder": "temp/sass-ts/",
+
+    "exportAsDefault": true,
+
+    "cssOutputFolders": ["lib", "lib-commonjs"],
+
+    "fileExtensions": [".sass", ".scss"],
+
+    "importIncludePaths": ["node_modules", "src"],
+
+    "excludeFiles": []
+}

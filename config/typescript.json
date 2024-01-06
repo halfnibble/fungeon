@@ -1,0 +1,42 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/typescript.schema.json",
+
+    "additionalModuleKindsToEmit": [
+        {
+            "moduleKind": "commonjs",
+            "outFolderName": "lib-commonjs"
+        }
+    ],
+
+    "emitCjsExtensionForCommonJS": false,
+
+    "emitMjsExtensionForESModule": false,
+
+    "useTranspilerWorker": true,
+
+    "staticAssetsToCopy": {
+        "fileExtensions": [
+            ".aac",
+            ".css",
+            ".eot",
+            ".gif",
+            ".jpeg",
+            ".jpg",
+            ".json",
+            ".m4a",
+            ".mp3",
+            ".mp4",
+            ".oga",
+            ".otf",
+            ".png",
+            ".scss",
+            ".svg",
+            ".ttf",
+            ".wav",
+            ".webm",
+            ".webp",
+            ".woff",
+            ".woff2"
+        ]
+    }
+}

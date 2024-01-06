@@ -1,4 +1,6 @@
-const jsControlled = document.getElementById('js-controlled');
+import * as PIXI from 'pixi.js';
+
+const jsControlled = document.getElementById('js-controlled') as HTMLElement;
 
 jsControlled.innerHTML = 'Successfully controlled by JavaScript!';
 
@@ -7,13 +9,13 @@ let app = new PIXI.Application({
     height: 232,
 });
 
-const gameContainer = document.getElementById('game-container');
-gameContainer.querySelector('.loading').remove();
-gameContainer.appendChild(app.view);
+const gameContainer = document.getElementById('game-container') as HTMLElement;
+gameContainer.querySelector('.loading')?.remove();
+gameContainer.appendChild(app.view as unknown as Node);
 
-const petCount = document.getElementById('pet-count');
+const petCount = document.getElementById('pet-count') as HTMLElement;
 let petCounter = 0;
-const missCount = document.getElementById('miss-count');
+const missCount = document.getElementById('miss-count') as HTMLElement;
 let missCounter = 0;
 
 function petCountMessage() {
@@ -40,8 +42,8 @@ function didPetCat(cat, x, y) {
 }
 
 gameContainer.addEventListener('click', (event) => {
-    hand_x = event.offsetX;
-    hand_y = event.offsetY;
+    const hand_x = event.offsetX;
+    const hand_y = event.offsetY;
     if (didPetCat(kitten, hand_x, hand_y)) {
         console.log('Pet the cat!');
         petCounter++;
@@ -53,7 +55,7 @@ gameContainer.addEventListener('click', (event) => {
     }
 });
 
-let kitten = PIXI.Sprite.from('./assets/cat_sprite_32px.png');
+let kitten = PIXI.Sprite.from('./img/cat_sprite_32px.png');
 app.stage.addChild(kitten);
 
 let elapsed = 0.0;
