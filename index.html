@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fungeon - Family Friendly Dungeon Game</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
 </head>
 <body>
     <h1>Welcome to Fungeon, the game</h1>
-    <div id="js-controlled">script loading...</div>
+    <div id="js-controlled">Script loading...</div>
+
+    <p>
+        Try to pet the kitten!
+    </p>
+
+    <p id="score-container">
+        <span id="score">Score: 0</span>
+        <span> | </span>
+        <span id="high-score">High Score: 0</span>
+    </p>
+
+    <p id="action-container">
+        <span id="pet-count">Pet count: 0</span>
+        <br />
+        <span id="miss-count">Miss count: 0</span>
+    </p>
+
+    <div id="game-container"><span class="loading">Game loading...</span></div>
 
     <!-- Load JS at the bottom of the body -->
     <script src="main.js"></script>
