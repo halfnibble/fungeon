@@ -36,7 +36,8 @@ gameContainer.addEventListener('mouseup', () => {
 function didPetCat(cat, x, y) {
     console.log(`Cat: ${cat.x}, ${cat.y}`);
     console.log(`Hand: ${x}, ${y}`);
-    return x >= cat.x && x <= cat.x + 32 && y >= cat.y && y <= cat.y + 32;
+    // DID A LOT OF CODE TO FIGURE THIS OUT
+    return x >= cat.x && x <= cat.y + 32 && y >= cat.x && y <= cat.y + 32;
 }
 
 gameContainer.addEventListener('click', (event) => {
@@ -47,7 +48,7 @@ gameContainer.addEventListener('click', (event) => {
         petCounter++;
         petCount.innerHTML = petCountMessage();
     } else {
-        console.log('Missed the cat!');
+        console.log('You missed the cat!');
         missCounter++;
         missCount.innerHTML = missCountMessage();
     }
