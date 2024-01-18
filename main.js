@@ -36,7 +36,8 @@ gameContainer.addEventListener('mouseup', () => {
 function didPetCat(cat, x, y) {
     console.log(`Cat: ${cat.x}, ${cat.y}`);
     console.log(`Hand: ${x}, ${y}`);
-    return x >= cat.x && x <= cat.x + 32 && y >= cat.y && y <= cat.y + 32;
+    // MAJOR CHANGES HERE!
+    return x >= cat.x && x <= cat.x + 64 && y >= cat.y && y <= cat.y + 64;
 }
 
 gameContainer.addEventListener('click', (event) => {
